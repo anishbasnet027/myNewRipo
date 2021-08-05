@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<meta name="description" content="This page has contact form" />
+	<meta name="keywords" content="portfolio, Contact " />
+	<meta name="author" content="Anish Basnet" />
+	<link rel="stylesheet" type="text/css" href="../CSS/Style.css">
+	<style type="text/css">
+		*
+		{
+			margin: 0px auto;
+		}
+	</style>
+	<!-- internal CSS-->
+	<style> 
+		body{
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+
+		}
+		.Contactform{
+			padding: 0px;
+			background-color: rgba(51,51,51,0.8);
+			border-radius: 5px 5px 5px 5px;
+			color: white;
+			width: 80%;
+			margin: auto;
+			margin-top: 0px;
+			text-align: center;
+			padding-top: 10px;
+			border-radius: 50px;
+		}
+		.ContactForm .input-feild{
+			margin-bottom: 10px;
+		}
+
+		.buttom input[type="submit"]{
+			margin-top: 10px;
+			padding: 15px;
+			width: 150px;
+			border: 0px;
+			background: grey;
+			color: white;
+			letter-spacing: 2px;
+			border-radius: 20px;
+		}
+
+	</style>
+
+</head>
+
+<body style="background-image: url(../Images/Background.jpg)";>
+	<!--div for whole -->
+	<div style="background:transparent; width: 100%; height: 800px;">
+		<header>
+			<!--Div for header-->
+			<div style="background:transparent; width: 100%; height: 150px;">
+				<!--logo div-->
+				<div style="background:transparent; width: 10%; height: 150px; float: left;">
+					<img src="../Images/newlogo.jpg" alt="Logo of website" style="width:100%;height:150px; border-radius: 50%;">
+				</div><!--end logo-->
+				<!-- div inside header right-->
+				<div style="background:transparent; width: 90%; height: 150px; float: right">
+					<div style="background:transparent; width: 100%; height: 100px; "> <!-- moto-->
+						<h1 class="motto-text" ><mark>G00D VIBES ONLY</mark></h1>
+					</div><!-- end moto-->
+					<div style=" width: 100%; height: 50px; "> <!-- nav-->
+						<nav class="nav" style="width: 100%; margin: auto;">
+							<ul>
+								<li class="menu"><a href="../Index.html" >Home</a></li>
+								<li class="menu"><a href="Cv.html" >Cv</a></li>
+								<li class="menu"><a href="Blog.html" >Blog</a></li>
+								<li class="menu"><a href="Research.html" >Research</a></li>
+								<li class="current"><a href="Contact.html" >Contact</a></li>
+
+							</ul>
+						</nav>
+					</div><!-- end nav-->
+					
+				</div><!--end right-->
+				
+			</div><!--end header-->
+			<!-- div for moving text motto-->	
+			<div style="background-color: #8ed6de; width: 100%; height: 30px; padding-top: 10px;font-family: Comic Sans MS;">
+				<marquee>“All life is an experiment. The more experiments you make the better.” —Ralph Waldo Emerson </marquee>
+			</div>
+		</header>
+
+		<div class="Contactform" style="width: 70%; height: 550px; margin-top: 20px;"> <!--Contact form-->
+			<form name="contactInfo" onsubmit="contactInfoForm()">
+			<h2> Contact Form</h2> <br>
+			<div class="input-feild">
+				<input type="text" name="Fname" placeholder="First Name"><br><br> <!-- inpu feilds-->
+			</div class="input-feild">
+			<div>
+				<br><input type="text" name="Lname" placeholder="Last Name"><br><br>
+			</div class="input-feild">
+			<div>
+				<br><input type="text" name="address" placeholder="Address"><br><br>
+			</div>
+			<div class="input-feild">
+				<br><input type="number" name="phone" placeholder="Phone no"><br><br>
+			</div>
+
+			Gender:
+			<select name="gender">
+				<option value="male">M</option>
+				<option value="female">F</option>
+			</select> 
+			<br>
+
+			<div class="input-feild">
+				<br><textarea name="message" rows="10" cols="30" placeholder="Enter Message for feedback"></textarea></p>
+			</div>
+			<div class="buttom">
+				<p style="text-align: center;"><input type="submit" value="Submit"></p>
+			</div>
+			</form>
+			<script>
+				function contactInfoForm() {
+					var Fname = document.forms["contactInfo"]["Fname"].value;
+					var Lname = document.forms["contactInfo"]["Lname"].value;
+					var address = document.forms["contactInfo"]["address"].value;
+					var phone = document.forms["contactInfo"]["phone"].value;
+					var gender = document.forms["contactInfo"]["gender"].value;
+					var message = document.forms["contactInfo"]["message"].value;
+
+					if (Fname == "" || Lname == "" || address=="" || phone=="" || message == ""){
+						alert("Please fill all the feilds");
+					}
+					else {
+						alert("Thank you! Please visit again ");
+					}
+				}
+			</script>
+			
+		</div>
+	</div> <!-- end whole-->
+
+<footer class="footer">
+	<br>
+	<p>&copy; Anish Basnet </p>
+	<div style=" width: 60%; height: 60px; float: right;"> <!-- for text and img links-->
+		<div style=" width: 50%; height: 60px; float: left;"> <!-- for text-->
+			<p>Feel free to contact me for any queires.</p><br>
+			<p> These are my social media links</p>
+		</div> <!-- end text-->
+			<div style=" width: 50%; height: 60px; float: right;"> <!-- img -->
+				<div style="width: 20%; height: 60px; float: left;" > <!-- facebook-->
+					<a href=" https://www.facebook.com/anish.basnet.5667901"  target="_blank">   
+						<img src="../Images/facebook.png">
+					</a>
+				</div><!-- end facebook -->
+					<a href="https://www.instagram.com/anish_.basnet/ "  target="_blank" >
+						<img src="../Images/instagram.jpg" >
+					</a>	
+				</div>
+			</div>
+</footer>
+</body>
+</html>
